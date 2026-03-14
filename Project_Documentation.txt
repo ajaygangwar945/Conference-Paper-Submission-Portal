@@ -1,0 +1,37 @@
+CONFERENCE PAPER SUBMISSION PORTAL - PROJECT DOCUMENTATION
+==========================================================
+
+1. PROJECT OVERVIEW
+------------------
+The Conference Paper Submission Portal is a specialized database-driven application designed to handle the intricate workflow of academic conferences. The project was conceived to replace manual submission systems with a high-performance, validated, and secure digital portal.
+
+2. TECHNOLOGY STACK & SELECTION RATIONALE
+---------------------------------------
+* Database: Oracle 19c
+  - Rationale: Exceptional support for complex data types (CLOBs for abstracts), robust ACID compliance, and native integration with Oracle APEX.
+* Application Framework: Oracle APEX
+  - Rationale: Low-code development allows for rapid deployment of secure, responsive web interfaces while staying close to the data layer.
+* Language: SQL & PL/SQL
+  - Rationale: PL/SQL procedures enable server-side validation logic, ensuring data integrity before any record hits the disk.
+
+3. ARCHITECTURE & SCHEMA DESIGN
+------------------------------
+The system revolves around four core modules:
+* User Module: Handles authentication and hierarchical access control.
+* Conference Module: Captures administrative metadata for events.
+* Submission Module: The heart of the system, linking users to papers and conferences.
+* Status Engine: A finite state machine implementation for paper lifecycles.
+
+4. CORE LOGIC & ALGORITHMS
+--------------------------
+* Submission Validation: A PL/SQL procedure `submit_paper` implements a threshold algorithm to prevent users from exceeding the paper limit set by the conference administrator.
+* Auto-Audit Trigger: `trg_papers_last_modified` automatically manages the temporal metadata, ensuring every update is timestamped without application-level intervention.
+* Role-Based Access Control (RBAC): Implemented via check constraints and database-level roles to ensure data privacy between different user types.
+
+5. HOW IT WORKS
+---------------
+Students or Faculty members register and select an active conference. They submit their title, abstract, keywords, and file path. The system validates the deadline and submission count. Reviewers then access the papers assigned to them, providing scores. Administrators finally set the status based on aggregated scores.
+
+6. CONCLUSION
+-------------
+By leveraging Oracle's enterprise features, this portal ensures that the academic review process is fair, digitized, and highly organized.

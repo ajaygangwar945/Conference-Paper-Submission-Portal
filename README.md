@@ -51,6 +51,10 @@ You can explore the live application here:
 ## 📂 Project Structure
 
 - `Conference-Paper-Submission-Portal.sql`: Core database schema including table definitions, constraints, triggers, and stored procedures.
+- `Project_Documentation.txt`: Detailed technical documentation and architectural overview.
+- `Conference-Paper-Submission-Portal-Banner.png`: Project banner image.
+- `logo.svg`: Project logo.
+- `README.md`: Project documentation and setup guide.
 
 ---
 

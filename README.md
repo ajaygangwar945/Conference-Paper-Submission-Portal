@@ -24,9 +24,6 @@ The Conference Paper Submission Portal is designed to streamline the academic su
 You can explore the live application here:
 [Conference Paper Submission Portal](https://oracleapex.com/ords/r/ajaygangwar945/conference-paper-submission-portal/home)
 
-> [!NOTE]
-> The session ID in the URL is temporary. For best results, use the base link provided above.
-
 ---
 
 ## 🛠 Tech Stack
